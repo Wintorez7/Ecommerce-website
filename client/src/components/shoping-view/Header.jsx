@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ShopingHeader = () => {
+const ShoppingHeader = () => {
   return (
     <div>
         Shoping-View-header
@@ -8,4 +8,4 @@ const ShopingHeader = () => {
   )
 }
 
-export default ShopingHeader
+export default ShoppingHeader

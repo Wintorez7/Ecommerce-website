@@ -1,7 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 
-const ShopingLayout = () => {
+const ShoppingLayout = () => {
   return (
     <div className='flex flex-col bg-white overflow-hidden'>
         {/* comman header */}
@@ -13,4 +13,4 @@ const ShopingLayout = () => {
   )
 }
 
-export default ShopingLayout
+export default ShoppingLayout
