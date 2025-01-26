@@ -14,6 +14,7 @@ import ShoppingListing from "./pages/shoping-view/Listing"
 import ShoppingCheckout from "./pages/shoping-view/Checkout"
 import ShoppingAccount from "./pages/shoping-view/Account"
 import CheckAuth from "./components/common/CheckAuth"
+import Unauth from "./pages/unauth-page"
 
 
 function App() {
@@ -42,13 +43,18 @@ function App() {
             <Route path="products" element={<AdminProducts/>}/>
             <Route path="features" element={<AdminFeatures/>}/>
           </Route>
-          <Route path="/shop" element={<ShoppingLayout/>}>
+          <Route path="/shop" element={
+            <CheckAuth isAuthenticated={isAuthenticated} user={user}>
+              <ShoppingLayout/>
+            </CheckAuth>
+          }>
             <Route path="home" element={<ShoppingHome/>}/>
             <Route path="listing" element={<ShoppingListing/>}/>
             <Route path="checkout" element={<ShoppingCheckout/>}/>
             <Route path="account" element={<ShoppingAccount/>}/>
           </Route>
           
+          <Route path="/unauth-page" element={<Unauth/>}/>
           <Route path="*" element={<NotFound/>}/>
       </Routes>
     </div>
